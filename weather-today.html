@@ -173,17 +173,87 @@
           <div class="row vertical-gap">
             <div class="col-lg-8">
               <div class="nk-portfolio-info">
-                <div class="nk-portfolio-text">
+                <div class="nk-portfolio-text" style='text-align:justify'>
+                  <hr>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    This Weather App was built with React - JavaScript framework. With React you can create interactive UIs. 
+                    It's easy to create simple views for each state and React efficiently update and render just the right 
+                    components when your data changes. For this project, I used OpenWeatherMap API to fetch real-time data 
+                    for a specific location.
                   </p>
+
+                  <p>
+                    I started project set up on conventional way of using the command line CLI tool 
+                    <code>'create-react-app'</code>
+                    After the installation process is completed, you’ll have react project successfully setup and launched on your 
+                    browser localhost:3000. App component is the major class components that will be wrapping all other components, 
+                    like Title, Weather, Clock and Form Component.
+                  </p>
+
+                  <p>
+                    All of the components are created by extending React.Component. React components always implement a render() method
+                    that will return a single element, in this case, a div, inside which we then add every other element we want to render
+                    to the DOM. 
+                  </p>
+
+                  <p>
+                    ReactDOM is a library that is used to render components on the DOM. Like in index.html rendering App component on the 
+                    root element with the id of root. <code>ReactDOM.render(< App/>, document.getElementById("root"))</code> 
+                  </p>
+
+                  <p>
+                    For fetching real-time data I used OpenWeatherMap API. It's very easy to sing up and get a unique key. To remember, always
+                     keep your API key safe and secure. To store API key I created .env file with a unique key. I add .env file to .gitignore so 
+                     this file is ignored in .git. To access our key we can use that environment variable process.env like so 
+                     <code>var api_key = process.env.API_KEY;</code>
+                  </p>
+
+                  <p>
+                    So why we need API key? It's a way for websites to know that you are trying to access the data from their database. When you 
+                    make a call, that website will use your unique key to see who you are and what kind of data you need to access. 
+                  </p>
+
+                  <p>
+                    To make a fetch call I'm using async/await. It's a great way to make https request. I created function getWeather and right before
+                    declaring the function I put a keyword <code>async</code> and then when you actually going to make a call type keyword <code>await</code>
+                    Then finally create a response variable that will take in results of api call and convert it to json. Json stands for JavaScript object notation,
+                     which means it just convert data that we get from api to readable format for any programming language.
+                  </p>
+
+                  <p>
+                    The next step is when we click on submit button in Form.js file we get call this function getWeather(). That brings us to props. Props stand for 'properties',
+                    It allows you to pass data between componets via HTML attributes.
+                  </p>
+                  <p>
+                    You can call props whatever you want, I'm calling my getWeather and I will pass it to Form Componnet<code>getWeather={this.getWeather}</code>(with keyword "this")
+                    so this way it will have access to props in Form.js file like so <code>onSubmit={this.props.getWeather}</code>(with keyword "this.props").
+                  </p>
+
+                  <p>
+                    To show data to the user in Form.js file I set name attributes for country and city, I'm going to use those name attributes to access the value of this input
+                    in App.js like this <code>http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${Api_Key}</code> I have to set up target event property that will get that 
+                    element on which the event originally occurred <code>const city = e.target.elements.city.value</code> and same for country<code>const country = e.target.elements.country.value</code>
+                  </p>
+                  <p>
+                    This brings us to the state. State is an object that lives within components, its responsibility to keep track of changes in our data, for example, if the user clicks on the button, submit a form, ect.
+                    First, we need to initiate the state that holds key-value pairs and set it undefined. Then within getWeather() we will use setState to set current values of the state that contain an object. 
+                    To access object, on click inspect page we can see API giving us data and from there we can see how to set up our state. 
+                    For example the name of the city will be <code>city: data.name</code>
+                  </p>
+                  <p>
+                    To pass these values we set it up in the state to the Weather component, we use props. Within App component in render() we will pass props to Weather Component like This<code>city={this.state.city}</code>.
+                    This means we have access to these props in Weather.js file<code>{this.props.city}</code>.
+                  </p>
+                  <p>
+                    I add an error message in case user submits an empty value for city or country. Just before setState we do a conditional check that says, if city and country are true, then set the state, else show an
+                    error message. 
+                  </p>
+
+                  <p>
+                    For this project I got inspired by many tutorials online and decided to pratice my knowledge by following allong. 
+                  </p>
+
+                  <hr>
                   <br />
                   <iframe width="560" height="315" src="https://www.youtube.com/embed/egKhQzQ3bmE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
