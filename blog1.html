@@ -39,7 +39,7 @@
 </head>
 
 
-<body>
+<code>
 
 
 
@@ -167,7 +167,7 @@
         <!-- START: Header Title -->
         <div class="nk-header-title nk-header-title-lg">
             <div class="bg-image">
-                <div style="background-image: url('assets/images/post-1-mid.jpg');"></div>
+                <div style="background-image: url('assets/images/blog1.jpg');"></div>
 
             </div>
             <div class="nk-header-table">
@@ -192,21 +192,55 @@
 
                     <!-- START: Post -->
                     <div class="nk-blog-post nk-blog-post-single">
-                        <h1 class="display-4">Some title</h1>
+                        <h1 class="display-4">A brief history of JavaScript</h1>
 
                         <div class="nk-post-meta">
-                            <div class="nk-post-date">August 14, 2016</div>
+                            <div class="nk-post-date">March 12, 2020</div>
                         </div>
 
                         <!-- START: Post Text -->
-                        <div class="nk-post-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet porttitor eget dolor morbi non arcu risus. Hendrerit gravida rutrum quisque non tellus orci. Turpis egestas pretium aenean pharetra. At tellus at urna condimentum mattis pellentesque id nibh tortor. Orci ac auctor augue mauris augue neque. A pellentesque sit amet porttitor eget dolor morbi. Sed vulputate odio ut enim. Faucibus pulvinar elementum integer enim. Donec et odio pellentesque diam volutpat. Massa id neque aliquam vestibulum morbi blandit cursus risus. Arcu vitae elementum curabitur vitae nunc sed velit. Netus et malesuada fames ac turpis egestas. A pellentesque sit amet porttitor eget dolor morbi non arcu. Ultrices neque ornare aenean euismod elementum nisi. Dolor sit amet consectetur adipiscing elit. Mattis rhoncus urna neque viverra justo nec ultrices dui. Ac turpis egestas sed tempus urna et pharetra pharetra.</p>
-                            <blockquote>
-                                <em>Donec consectetur arcu eu diam cursus consectetur. Interdum malesuada faucibus. Morbi dapibus eros vitae nisi blandit lacinia.</em>
-                            </blockquote>
-
-                            <p>Pellentesque viverra nisl a erat volutpat commodo. Etiam sem justo, pellentesque egestas finibus at, rutrum efficitur ex. Donec facilisis magna in mauris fermentum, sit amet porttitor lorem dictum. Donec in purus elementum, sagittis magna sit amet, auctor enim. Duis purus ex, interdum ac lacus in, ullamcorper vestibulum urna. Duis ornare nec purus ut laoreet.</p>
-
+                        <div class="nk-post-text" style='text-align:justify'>
+                          <p>
+                            Creator of JavaScript  Brendan Eich developed JavaScript in 1995 in just 10 days, originally named Mocha, then LiveScript and later JavaScript.
+                            <br><br>
+                            Java was very popular at that time, so it was decided that positioning a new language as a “younger brother” of Java would help.
+                            Running Java programs, the code must be first compiled into an executable form. But  JavaScript was created to be interpreted at run time, making it much more dynamic.
+                            <br><br>
+                            JavaScript became a fully independent language with its own specification called  ECMAScript, a body founded with the goal of standardizing computing and now it has no relation to Java at all.
+                            <br><br>
+                            Lightweight means that the language does not take too much memory of the computer and it has a relatively simple syntax. It can be used cross-platforms which means it executes not only the browser but also on servers.
+                            <br><br>
+                            Browsers have embedded engine sometimes called “JavaScript virtual machine”, how an engine works:
+                                <li>it reads(parses) the script</li>
+                                <li>then converts(compile)the script to the machine language</li>
+                                <li>and then machine code runs, fast!</li>
+                            <br><br>
+                            JavaScript made modern web development possible, used to create and control dynamic website content, i.e. anything that moves, refreshes, or otherwise changes on your screen without requiring you to manually reload a web page.
+                            <br><br>
+                            <strong>Trio fantastico</strong> HTML, CSS  and JavaScript form the backbone of web development.
+                            <li>HTML is responsible for content </li>
+                            <li>CSS for representation styling and laying out  elements on the web page</li>
+                            <li>JS allows you to add dynamic on the web page.</li>
+                            <br><br>
+                            How does JavaScript work?
+                            There are two ways how we can add JavaScript to our website.
+                            The first one is adding an online script tag into our HTML file after body closing tag.
+                            <pre>
+                                <code>
+                                    &lt;script&gt;console.log("Hello World!")&lt;script&gt;
+                                </code>
+                            </pre>
+                            Open up index.html and right click on inspect/console and you should see “Hello world!” printed out.
+                            The second one is adding an external JS file, in this case, I made a new external file script.js. and added to index.html
+                            <pre>
+                                <code>
+                                    &lt;script src="/script.js"&gt;&lt;script&gt;
+                                </code>
+                            </pre>
+                            Brendan Eich’s 10-day coding spree is the most important sprint in the history of computing.
+                            Today JavaScript has become one of the most used programming languages.
+                          </p>
+                          
                         </div>
                         <!-- END: Post Text -->
                     </div>
@@ -249,13 +283,6 @@
 
 
 
-    <!-- START: Scripts -->
-
-    <script src="assets/js/combined.js"></script>
-
-    <!-- END: Scripts -->
 
 
-</body>
 
-</html>
